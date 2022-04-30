@@ -1,0 +1,18 @@
+.tasks {
+  height: 80vh;
+  width: 70vw;
+  display: flex;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.tasks__items {
+  height: 100%;
+  width: 30%;
+  background-color: #a7d4ff;
+}
+
+.tasks__panel {
+  height: 100%;
+  width: 70%;
+  background-color: #145089;
+}

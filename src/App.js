@@ -1,9 +1,12 @@
 import Main from "./Components/layout/Main";
+import Task from "./Components/Task/Task";
 
 function App() {
   return (
     <>
-      <Main></Main>
+      <Main>
+        <Task />
+      </Main>
     </>
   );
 }
