@@ -1,0 +1,23 @@
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  background-color: #f95738;
+  color: #fff;
+}
