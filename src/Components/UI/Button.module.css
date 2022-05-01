@@ -18,15 +18,15 @@
   background-image: none;
   border: 1px solid transparent;
   border-radius: 1rem;
-  background-color: #f95738;
-  color: #fff;
+  background-color: var(--color-tertiary);
+  color: var(--color-white);
   transition: all 0.3s;
 }
 
 .button:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(-7px);
-  background-color: #ff6d50;
+  opacity: 0.9;
 }
 
 .button:active {

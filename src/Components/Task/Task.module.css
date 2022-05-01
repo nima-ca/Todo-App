@@ -9,7 +9,7 @@
 .tasks__items {
   height: 100%;
   width: 30%;
-  background-color: #a7d4ff;
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -24,5 +24,5 @@
 .tasks__panel {
   height: 100%;
   width: 70%;
-  background-color: #145089;
+  background-color: var(--color-primary-light);
 }

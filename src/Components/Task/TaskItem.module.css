@@ -4,20 +4,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid #003566;
+  border-bottom: 1px solid var(--color-primary);
   cursor: pointer;
   margin-bottom: 1rem;
-  color: #003566;
+  color: var(--color-primary);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  background-color: #b0d8fe;
+  background-color: var(--color-secondary);
   transition: all 0.2s;
 }
 
 .taskItem:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
-  background-color: #003566;
-  color: #b0d8fe;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .taskItem:active {
@@ -33,9 +33,9 @@
 }
 
 .dot__green {
-  background-color: #00ff00;
+  background-color: var(--color-green);
 }
 
 .dot__red {
-  background-color: #ff0000;
+  background-color: var(--color-red);
 }

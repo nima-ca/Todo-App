@@ -4,5 +4,5 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #003566;
+  background-color: var(--color-primary);
 }
