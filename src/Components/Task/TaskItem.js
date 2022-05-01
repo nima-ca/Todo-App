@@ -7,8 +7,6 @@ const TaskItem = (props) => {
     status === "Done" ? styles["dot__green"] : styles["dot__red"]
   }`;
 
-  console.log(status);
-
   return (
     <div className={styles.taskItem}>
       <p>{title}</p>
