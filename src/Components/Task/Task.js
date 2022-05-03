@@ -1,6 +1,8 @@
 import styles from "./Task.module.css";
 import Button from "../UI/Button";
 import TaskItem from "./TaskItem";
+import { useDispatch } from "react-redux";
+import { toggleModalActions } from "../../store/ModalToggleSlice";
 
 const Dummy_data = [
   { title: "Task 1", status: "Done", id: "task-1" },
@@ -10,6 +12,12 @@ const Dummy_data = [
 ];
 
 const Task = (props) => {
+  const dispatch = useDispatch();
+
+  const buttonClickHandler = () => {
+    dispatch(toggleModalActions.toggleModal());
+  };
+
   return (
     <section className={styles.tasks}>
       <div className={styles["tasks__items"]}>
@@ -18,7 +26,7 @@ const Task = (props) => {
             <TaskItem key={item.id} title={item.title} status={item.status} />
           ))}
         </div>
-        <Button content={"Add New Task"} />
+        <Button onClick={buttonClickHandler} content={"Add New Task"} />
       </div>
       <div className={styles["tasks__panel"]}></div>
     </section>
