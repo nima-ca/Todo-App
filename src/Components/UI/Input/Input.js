@@ -17,15 +17,16 @@ const Input = (props) => {
   };
 
   const hasError = !isValid && (isTouched || props.onSubmit);
+  const { onChange, id } = props;
 
   useEffect(() => {
     setIsValid(isNotEmpty(enteredValue));
-    props.onChange({
-      id: props.id,
+    onChange({
+      id: id,
       value: enteredValue,
       isValid,
     });
-  }, [enteredValue, isValid]);
+  }, [enteredValue, isValid, id]);
 
   const inputClasses = `${styles.input} ${hasError ? styles.invalid : ""}`;
 
