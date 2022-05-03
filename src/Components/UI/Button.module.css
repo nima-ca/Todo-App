@@ -1,4 +1,4 @@
-.button {
+button {
   display: inline-block;
   padding: 1rem 2rem;
   margin-bottom: 0;
@@ -18,18 +18,31 @@
   background-image: none;
   border: 1px solid transparent;
   border-radius: 1rem;
-  background-color: var(--color-tertiary);
-  color: var(--color-white);
   transition: all 0.3s;
 }
 
-.button:hover {
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.tertiary {
+  background-color: var(--color-tertiary);
+  color: var(--color-white);
+}
+
+.tertiary:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(-7px);
   opacity: 0.9;
 }
 
-.button:active {
+.tertiary:active {
   box-shadow: none;
   transform: translateY(0);
 }

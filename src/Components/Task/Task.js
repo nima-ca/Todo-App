@@ -26,7 +26,11 @@ const Task = (props) => {
             <TaskItem key={item.id} title={item.title} status={item.status} />
           ))}
         </div>
-        <Button onClick={buttonClickHandler} content={"Add New Task"} />
+        <Button
+          onClick={buttonClickHandler}
+          content={"Add New Task"}
+          styles="tertiary"
+        />
       </div>
       <div className={styles["tasks__panel"]}></div>
     </section>
