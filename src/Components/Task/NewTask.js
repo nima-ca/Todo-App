@@ -53,6 +53,7 @@ const NewTask = (props) => {
     };
 
     console.log(formData);
+    dispatch(toggleModalActions.toggleModal());
   };
 
   return (
