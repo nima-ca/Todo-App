@@ -14,10 +14,15 @@ const NewTask = (props) => {
     <Modal>
       <h1>New Task</h1>
       <form>
-        <Input id="title" label="Title" type="text" placeholder="New Task..." />
+        <Input
+          id="title"
+          label="Title:"
+          type="text"
+          placeholder="New Task..."
+        />
         <Input
           id="description"
-          label="Description"
+          label="Description:"
           type="text"
           placeholder="Description..."
         />

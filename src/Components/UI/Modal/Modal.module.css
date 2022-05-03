@@ -1,3 +1,13 @@
+.modalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -10,11 +20,9 @@
 
 .modal {
   position: fixed;
-  top: 5vh;
-  left: 5%;
   width: 90%;
   background-color: white;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
@@ -23,8 +31,7 @@
 
 @media (min-width: 768px) {
   .modal {
-    width: 40rem;
-    left: calc(50% - 20rem);
+    width: 60rem;
   }
 }
 
