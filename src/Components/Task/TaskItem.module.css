@@ -24,6 +24,8 @@
 
 .taskItem:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+.taskItem:active:not(:first-child) {
   transform: translateY(0);
 }
 
