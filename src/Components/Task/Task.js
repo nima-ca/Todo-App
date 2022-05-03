@@ -7,7 +7,6 @@ import { toggleModalActions } from "../../store/ModalToggleSlice";
 const Task = (props) => {
   const dispatch = useDispatch();
   const Data = useSelector((state) => state.data.data);
-  console.log(Data);
 
   const buttonClickHandler = () => {
     dispatch(toggleModalActions.toggleModal());
