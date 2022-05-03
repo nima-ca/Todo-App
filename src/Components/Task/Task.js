@@ -15,6 +15,7 @@ const Task = (props) => {
   return (
     <section className={styles.tasks}>
       <div className={styles["tasks__items"]}>
+        <h2 className={styles.title}>TODO Tasks</h2>
         <div>
           {Data.map((item) => (
             <TaskItem key={item.id} title={item.title} status={item.status} />

@@ -18,7 +18,7 @@
 
 .tasks__items > div {
   overflow: auto;
-  height: 80%;
+  height: 70%;
   width: 90%;
 }
 
@@ -26,4 +26,12 @@
   height: 100%;
   width: 70%;
   background-color: var(--color-primary-light);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-tertiary);
+  text-align: center;
+  padding: 0.5rem;
 }
