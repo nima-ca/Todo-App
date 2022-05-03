@@ -17,6 +17,7 @@
 }
 
 .tasks__items > div {
+  overflow: auto;
   height: 80%;
   width: 90%;
 }

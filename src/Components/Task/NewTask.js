@@ -4,6 +4,7 @@ import Input from "../UI/Input/Input";
 import Button from "../UI/Button";
 import { useDispatch } from "react-redux";
 import { toggleModalActions } from "../../store/ModalToggleSlice";
+import { dataHandlerActions } from "../../store/DataHandlerSlice";
 import { v4 as uuidv4 } from "uuid";
 
 const NewTask = (props) => {
@@ -52,7 +53,7 @@ const NewTask = (props) => {
       id: uuidv4(),
     };
 
-    console.log(formData);
+    dispatch(dataHandlerActions.addTask(formData));
     dispatch(toggleModalActions.toggleModal());
   };
 
