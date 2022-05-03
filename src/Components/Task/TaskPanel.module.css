@@ -1,0 +1,5 @@
+.tasks__panel {
+  height: 100%;
+  width: 70%;
+  background-color: var(--color-primary-light);
+}
