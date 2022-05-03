@@ -1,0 +1,41 @@
+.taskItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-primary);
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: var(--color-secondary);
+  transition: all 0.2s;
+}
+
+.taskItem:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.taskItem:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  transform: translateY(0);
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.dot__green {
+  background-color: var(--color-green);
+}
+
+.dot__red {
+  background-color: var(--color-red);
+}
