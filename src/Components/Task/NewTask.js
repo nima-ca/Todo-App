@@ -4,6 +4,7 @@ import Input from "../UI/Input/Input";
 import Button from "../UI/Button";
 import { useDispatch } from "react-redux";
 import { toggleModalActions } from "../../store/ModalToggleSlice";
+import { v4 as uuidv4 } from "uuid";
 
 const NewTask = (props) => {
   const [inputValue, setInputValue] = useState({});
@@ -48,6 +49,7 @@ const NewTask = (props) => {
       title: inputValue.title.value,
       description: inputValue.description.value,
       status: "UnDone",
+      id: uuidv4(),
     };
 
     console.log(formData);
