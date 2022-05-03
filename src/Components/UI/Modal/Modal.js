@@ -1,8 +1,14 @@
 import styles from "./Modal.module.css";
 import ReactDOM from "react-dom";
+import { useDispatch } from "react-redux";
+import { toggleModalActions } from "../../../store/ModalToggleSlice";
 
-const Backdrop = (props) => {
-  return <div className={styles.backdrop} onClick={props.onClose} />;
+const Backdrop = () => {
+  const dispatch = useDispatch();
+  const CancelClickHandler = () => {
+    dispatch(toggleModalActions.toggleModal());
+  };
+  return <div className={styles.backdrop} onClick={CancelClickHandler} />;
 };
 
 const ModalOverlay = (props) => {

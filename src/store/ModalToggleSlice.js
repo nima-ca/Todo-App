@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { isShown: false };
+const initialState = { isToggled: false };
 
 const modalToggleSlice = createSlice({
   name: "modalToggle",
   initialState,
   reducers: {
     toggleModal: (state) => {
-      state.isShown = !state.isShown;
+      state.isToggled = !state.isToggled;
     },
   },
 });
