@@ -15,9 +15,11 @@
 
 .taskItem:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
   background-color: var(--color-primary);
   color: var(--color-secondary);
+}
+.taskItem:hover:not(:first-child) {
+  transform: translateY(-5px);
 }
 
 .taskItem:active {
