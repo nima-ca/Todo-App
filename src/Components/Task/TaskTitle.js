@@ -3,6 +3,7 @@ import Button from "../UI/Button";
 import TaskItem from "./TaskItem";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModalActions } from "../../store/ModalToggleSlice";
+import { panelDataActions } from "../../store/PanelDataSlice";
 
 const TaskTitle = (props) => {
   const dispatch = useDispatch();
@@ -12,12 +13,23 @@ const TaskTitle = (props) => {
     dispatch(toggleModalActions.toggleModal());
   };
 
+  const ItemClickHandler = (data) => {
+    dispatch(panelDataActions.addTask(data));
+  };
+
   return (
     <div className={styles["tasks__items"]}>
       <h2 className={styles.title}>TODO Tasks</h2>
       <div>
         {Data.map((item) => (
-          <TaskItem key={item.id} title={item.title} status={item.status} />
+          <TaskItem
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            status={item.status}
+            description={item.description}
+            onClick={ItemClickHandler}
+          />
         ))}
       </div>
       <Button
