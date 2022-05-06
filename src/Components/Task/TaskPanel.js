@@ -10,7 +10,7 @@ const TaskPanel = (props) => {
         <h2 className={styles.header}>TODO Description</h2>
         <div>
           <div className={styles.title}>
-            <h3>test</h3>
+            <h3>Lorem ipsum dolor sit amet</h3>
             <div className={styles.icons}>
               <SwitchButton />
               <img src={Delete} alt="" />
