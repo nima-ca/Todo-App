@@ -12,6 +12,18 @@ const dataHandler = createSlice({
     deleteTask: (state, action) => {
       state.data = state.data.filter((item) => item.id !== action.payload);
     },
+    editTask: (state, action) => {
+      state.data = state.data.map((item) => {
+        if (item.id === action.payload.id) {
+          item.title = action.payload.title;
+          item.description = action.payload.description;
+          item.status = action.payload.status;
+          item.id = action.payload.id;
+          state.panelData = [{ ...item }];
+        }
+        return item;
+      });
+    },
     addPanelTask: (state, action) => {
       state.panelData = [action.payload];
     },
