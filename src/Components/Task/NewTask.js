@@ -78,10 +78,10 @@ const NewTask = (props) => {
           type="text"
           placeholder="Description..."
         />
-        <Button onClick={props.onClick} content={"Create"} styles="primary" />
+        <Button onClick={props.onClick} content="Create" styles="primary" />
         <Button
           onClick={CancelClickHandler}
-          content={"Cancel"}
+          content="Cancel"
           styles="secondary"
         />
       </form>
