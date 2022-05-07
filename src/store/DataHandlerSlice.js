@@ -30,6 +30,14 @@ const dataHandler = createSlice({
     clearPanel: (state) => {
       state.panelData.pop();
     },
+    toggleStatus: (state, action) => {
+      state.data = state.data.map((item) => {
+        if (item.id === action.payload) {
+          item.status = !item.status;
+        }
+        return item;
+      });
+    },
   },
 });
 

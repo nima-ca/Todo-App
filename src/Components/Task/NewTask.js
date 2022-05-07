@@ -50,7 +50,7 @@ const NewTask = (props) => {
     const formData = {
       title: inputValue.title.value,
       description: inputValue.description.value,
-      status: "UnDone",
+      status: false,
       id: uuidv4(),
     };
 

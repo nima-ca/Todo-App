@@ -3,7 +3,7 @@ import styles from "./TaskItem.module.css";
 const TaskItem = (props) => {
   const { id, title, status, description } = props;
   const statusClasses = `${styles.dot} ${
-    status === "Done" ? styles["dot__green"] : styles["dot__red"]
+    status ? styles["dot__green"] : styles["dot__red"]
   }`;
 
   const clickHandler = () => {
