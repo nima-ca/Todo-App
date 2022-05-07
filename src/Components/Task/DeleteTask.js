@@ -11,9 +11,9 @@ const DeleteTask = (props) => {
     dispatch(toggleModalActions.toggleModal());
   };
 
-  const deleteId = useSelector((state) => state.modal.id);
+  const deleteId = useSelector((state) => state.data.panelData);
   const deleteTask = () => {
-    dispatch(dataHandlerActions.deleteTask(deleteId));
+    dispatch(dataHandlerActions.deleteTask(deleteId[0].id));
     dispatch(dataHandlerActions.clearPanel());
     dispatch(toggleModalActions.toggleModal());
   };

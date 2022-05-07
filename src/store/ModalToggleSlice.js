@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { isToggled: false, type: null, id: null };
+const initialState = { isToggled: false, type: null };
 
 const modalToggleSlice = createSlice({
   name: "modalToggle",
@@ -9,9 +9,6 @@ const modalToggleSlice = createSlice({
     toggleModal: (state, actions) => {
       state.isToggled = !state.isToggled;
       state.type = actions.payload;
-    },
-    idCatch: (state, actions) => {
-      state.id = actions.payload;
     },
   },
 });

@@ -1,5 +1,4 @@
 import styles from "./TaskPanel.module.css";
-import SwitchButton from "../UI/SwitchButton";
 import Delete from "../UI/Icons/delete-svgrepo-com.svg";
 import Edit from "../UI/Icons/edit-svgrepo-com.svg";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,7 +10,6 @@ const TaskPanel = (props) => {
 
   const deleteModalHandler = () => {
     dispatch(toggleModalActions.toggleModal("deleteTask"));
-    dispatch(toggleModalActions.idCatch(selectedData[0].id));
   };
 
   const editModalHandler = () => {
@@ -27,7 +25,6 @@ const TaskPanel = (props) => {
             <div className={styles.title}>
               <h3>{selectedData[0].title}</h3>
               <div className={styles.icons}>
-                <SwitchButton />
                 <img onClick={deleteModalHandler} src={Delete} alt="" />
                 <img onClick={editModalHandler} src={Edit} alt="" />
               </div>
