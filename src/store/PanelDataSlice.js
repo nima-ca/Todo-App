@@ -9,6 +9,9 @@ const PanelDataHandler = createSlice({
     addTask: (state, action) => {
       state.panelData = [action.payload];
     },
+    clearPanel: (state) => {
+      state.panelData.pop();
+    },
   },
 });
 

@@ -10,7 +10,7 @@ const TaskTitle = (props) => {
   const Data = useSelector((state) => state.data.data);
 
   const buttonClickHandler = () => {
-    dispatch(toggleModalActions.toggleModal());
+    dispatch(toggleModalActions.toggleModal("newTask"));
   };
 
   const ItemClickHandler = (data) => {

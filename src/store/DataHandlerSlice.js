@@ -9,6 +9,9 @@ const dataHandler = createSlice({
     addTask: (state, action) => {
       state.data = [...state.data, action.payload];
     },
+    deleteTask: (state, action) => {
+      state.data = state.data.filter((item) => item.id !== action.payload);
+    },
   },
 });
 
