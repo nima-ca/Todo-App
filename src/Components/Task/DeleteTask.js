@@ -1,6 +1,6 @@
 import Modal from "../UI/Modal/Modal";
 import Button from "../UI/Button";
-import styles from "./DeleteTask.module.css";
+import styles from "./TaskFunctionsStyle.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { dataHandlerActions } from "../../store/DataHandlerSlice";
 import { toggleModalActions } from "../../store/ModalToggleSlice";

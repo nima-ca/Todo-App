@@ -61,7 +61,7 @@ const NewTask = (props) => {
 
   return (
     <Modal>
-      <form onSubmit={formSubmitHandler} className={styles.form}>
+      <form onSubmit={formSubmitHandler} className={styles.actions}>
         <h2>Edit Task</h2>
         <Input
           onSubmit={submitError}
