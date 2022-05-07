@@ -7,7 +7,7 @@ import { toggleModalActions } from "../../store/ModalToggleSlice";
 
 const TaskPanel = (props) => {
   const dispatch = useDispatch();
-  const selectedData = useSelector((state) => state.panelData.panelData);
+  const selectedData = useSelector((state) => state.data.panelData);
 
   const modalToggleHandler = () => {
     dispatch(toggleModalActions.toggleModal("deleteTask"));

@@ -3,7 +3,7 @@ import Button from "../UI/Button";
 import TaskItem from "./TaskItem";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModalActions } from "../../store/ModalToggleSlice";
-import { panelDataActions } from "../../store/PanelDataSlice";
+import { dataHandlerActions } from "../../store/DataHandlerSlice";
 
 const TaskTitle = (props) => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const TaskTitle = (props) => {
   };
 
   const ItemClickHandler = (data) => {
-    dispatch(panelDataActions.addTask(data));
+    dispatch(dataHandlerActions.addPanelTask(data));
   };
 
   return (

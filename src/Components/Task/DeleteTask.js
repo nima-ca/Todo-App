@@ -3,7 +3,6 @@ import Button from "../UI/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { dataHandlerActions } from "../../store/DataHandlerSlice";
 import { toggleModalActions } from "../../store/ModalToggleSlice";
-import { panelDataActions } from "../../store/PanelDataSlice";
 
 const DeleteTask = (props) => {
   const dispatch = useDispatch();
@@ -14,7 +13,7 @@ const DeleteTask = (props) => {
   const deleteId = useSelector((state) => state.modal.id);
   const deleteTask = () => {
     dispatch(dataHandlerActions.deleteTask(deleteId));
-    dispatch(panelDataActions.clearPanel());
+    dispatch(dataHandlerActions.clearPanel());
     dispatch(toggleModalActions.toggleModal());
   };
 
