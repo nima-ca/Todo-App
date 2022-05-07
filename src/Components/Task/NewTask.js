@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./NewTask.module.css";
+import styles from "./TaskFunctionsStyle.module.css";
 import Modal from "../UI/Modal/Modal";
 import Input from "../UI/Input/Input";
 import Button from "../UI/Button";
