@@ -4,7 +4,8 @@ import styles from "./Input.module.css";
 const isNotEmpty = (value) => value.trim() !== "";
 
 const Input = (props) => {
-  const [enteredValue, setEnteredValue] = useState("");
+  const inputDefaultValue = props.value ? props.value : "";
+  const [enteredValue, setEnteredValue] = useState(inputDefaultValue);
   const [isTouched, setIsTouched] = useState(false);
   const [isValid, setIsValid] = useState(false);
 
@@ -39,6 +40,7 @@ const Input = (props) => {
         onBlur={valueBlurHandler}
         type={props.type}
         id={props.id}
+        value={enteredValue}
         placeholder={props.placeholder}
       />
     </div>

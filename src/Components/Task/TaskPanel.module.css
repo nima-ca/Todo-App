@@ -1,0 +1,50 @@
+.tasks__panel {
+  height: 100%;
+  width: 70%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+  height: 85%;
+  width: 85%;
+  background-color: var(--color-secondary);
+  padding: 3rem;
+}
+
+.header {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--color-tertiary);
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.icon__container {
+  border-bottom: 1px solid var(--color-tertiary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+}
+
+.content {
+  font-size: 2rem;
+}
+
+.icons > * {
+  cursor: pointer;
+  margin-left: 2rem;
+}

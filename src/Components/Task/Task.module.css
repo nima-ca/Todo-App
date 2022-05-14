@@ -5,25 +5,3 @@
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   position: absolute;
 }
-
-.tasks__items {
-  height: 100%;
-  width: 30%;
-  background-color: var(--color-secondary);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.tasks__items > div {
-  overflow: auto;
-  height: 80%;
-  width: 90%;
-}
-
-.tasks__panel {
-  height: 100%;
-  width: 70%;
-  background-color: var(--color-primary-light);
-}

@@ -3,10 +3,9 @@ import styles from "./TaskFunctionsStyle.module.css";
 import Modal from "../UI/Modal/Modal";
 import Input from "../UI/Input/Input";
 import Button from "../UI/Button";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleModalActions } from "../../store/ModalToggleSlice";
 import { dataHandlerActions } from "../../store/DataHandlerSlice";
-import { v4 as uuidv4 } from "uuid";
 
 const NewTask = (props) => {
   const [inputValue, setInputValue] = useState({});
@@ -16,6 +15,8 @@ const NewTask = (props) => {
   const CancelClickHandler = () => {
     dispatch(toggleModalActions.toggleModal());
   };
+
+  const Data = useSelector((state) => state.data.panelData);
 
   const inputChangeHandler = (data) => {
     setInputValue((prevState) => {
@@ -50,25 +51,26 @@ const NewTask = (props) => {
     const formData = {
       title: inputValue.title.value,
       description: inputValue.description.value,
-      status: false,
-      id: uuidv4(),
+      status: Data[0].status,
+      id: Data[0].id,
     };
 
-    dispatch(dataHandlerActions.addTask(formData));
+    dispatch(dataHandlerActions.editTask(formData));
     dispatch(toggleModalActions.toggleModal());
   };
 
   return (
     <Modal>
       <form onSubmit={formSubmitHandler} className={styles.actions}>
-        <h2>New Task</h2>
+        <h2>Edit Task</h2>
         <Input
           onSubmit={submitError}
           onChange={inputChangeHandler}
           id="title"
           label="Title:"
           type="text"
-          placeholder="New Task..."
+          value={Data[0].title}
+          placeholder="Edit Task..."
         />
         <Input
           onSubmit={submitError}
@@ -76,9 +78,10 @@ const NewTask = (props) => {
           id="description"
           label="Description:"
           type="text"
-          placeholder="Description..."
+          value={Data[0].description}
+          placeholder="Edit Description..."
         />
-        <Button onClick={props.onClick} content="Create" styles="primary" />
+        <Button onClick={props.onClick} content="Edit" styles="primary" />
         <Button
           onClick={CancelClickHandler}
           content="Cancel"

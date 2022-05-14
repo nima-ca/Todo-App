@@ -1,0 +1,22 @@
+.tasks__items {
+  height: 100%;
+  width: 30%;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tasks__items > div {
+  overflow: auto;
+  height: 70%;
+  width: 90%;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-tertiary);
+  text-align: center;
+}
